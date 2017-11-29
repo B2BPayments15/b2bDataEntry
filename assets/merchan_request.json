@@ -1,0 +1,60 @@
+{
+  "bankingDetailsRequest": {
+    "bankAccountNumber": "0552687",
+    "country": "CA",
+    "currency": "CAD",
+    "routingNumber": "81530448"
+  },
+  "clientMerchantReference": "JESSYCALEGAULTKINESI",
+  "companyRequest": {
+    "addressRequest": {
+      "address": "10 DANY",
+      "address2": null,
+      "city": "ST HIPPOLYTE",
+      "country": "CA",
+      "state": "QC",
+      "zipCode": "J8A1B8"
+    },
+    --"annualProcessing": "LEVEL_1",
+    --"averagePaymentAmount": 80,
+    --"businessDescription": "OTHER",
+    --"businessType": "INC",
+    --"companyPhone": "4383923638",
+    --"countryOfIncorporation": "CA",
+    --"dbaName": "JESSYCA LEGAULT KINESIE",
+    --"descriptor": "JESSYCA LEGAULT KINESIE",
+    --"email": "JESSYCA_LEGAULT@HOTMAIL.COM",
+    --"legalName": "JESSYCA LEGAULT KINESIE",
+    "ownershipDetailsRequests": [
+      {
+        --"DateOfBirth": "\"19900407\"",
+        --"alternatePhone": "4383923638",
+        "driverLicenseRequest": {
+          "country": "CA",
+          "license": "12345678",
+          "state": "QC"
+        },
+        --"firstName": "JESSYCA",
+        --"lastName": "LEGAULT",
+        --"middleName": null,
+        --"ownerPercentage": "50",
+        --"position": true,
+        --"principalAddress": {
+          --"address": "10 DANY",
+          --"address2": null,
+          --"city": "ST HIPPOLYTE",
+          --"country": "CA",
+          --"state": "QC",
+          --"zipCode": "J8A1B8"
+        },
+        --"ssn": "288-418-874"
+      }
+    ],
+    --"website": "www.example.com"
+  },
+  --"creditCardPresent": true,
+  --"mccCode": "8099",
+  --"mid": "464473400000311",
+  --"ownershipTypes": "CORPORATION",
+  --"termsAccepted": true
+}
