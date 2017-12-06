@@ -9,10 +9,22 @@ class Merchant_model extends CI_Model {
 
         public function get_merchant($merchant_id = FALSE)
 		{
+		        $this->load->library('PHPRequests');
+
 		        if ($merchant_id === FALSE)
 		        {
 		                //$query = $this->db->order_by('id','ASC')->get('merchant');
 		                //return $query->result_array();
+		        	
+		        	$curl_headers = array('content-type' => 'application/json',
+					'Accept' => 'application/json', 
+					'Authorization' => 'Basic YWRtaW46c2VjcmV0', 
+					);
+					$response = Requests::get($GLOBALS['b2b_merchant_url'].'?count=30',
+						$curl_headers);
+				
+					return json_decode($response->body,true);
+
 		        }
 
 		        //$query = $this->db->get_where('merchant', array('id' => $merchant_id));
@@ -32,13 +44,13 @@ class Merchant_model extends CI_Model {
 					);
 				
 				$options = array(
-					'verify' => false
+					//'verify' => false
 				);
 			
-				//$response = Requests::get($GLOBALS['b2b_merchant_url'],
-				//$curl_headers,$options);
+				$response = Requests::get($GLOBALS['b2b_merchant_url'],
+				$curl_headers);
 				
-				//return $response;
+				return $response;
 			} else {
 
 			}

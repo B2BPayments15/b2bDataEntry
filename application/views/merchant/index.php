@@ -1,24 +1,46 @@
-<div class="starter-template">
-        
-
-    
-
-<h2><?php echo $title; ?></h2>
+<div class="row">
+	<div class="col-lg-12">
+		<h2><?php echo $title; ?></h2>
 
 <table class='table'>
-	<tr><th>Mid</th><th>Merchant ID</th><th>Created By</th><th>Modified By</th><th>Created Date</th><th>Modified Date</th><th>Portfolio</th><th>Operation</th></tr>
-<?php foreach ($merchant as $merchant_item): ?>
-<tr>
-	<td><?php echo $merchant_item['id']?></td>
-	<td><?=$merchant_item['reference']?></td>
-	<td><?=$merchant_item['created_by']?></td>
-	<td><?=$merchant_item['modified_by']?></td>
-	<td><?=$merchant_item['created_date']?></td>
-	<td><?=$merchant_item['modified_date']?></td>
-	<td><?=$merchant_item['mid']?></td>
-	<td><a href="<?php echo site_url('mid/'.$merchant_item['mid']); ?>">View mid</a></td>
-</tr>
+	<tr><th>Mid</th><th>Name</th><th>Status</th><th>Phone</th><th>Action</th></tr>
 
-<?php endforeach; ?>
+<?php foreach ($merchant as $merchant_item){
+
+	
+
+ ?>
+
+<tr>
+	<td>
+		<?php 
+		if( isset($merchant_item['mid']) ){
+			echo $merchant_item['mid'];
+		} else { echo "N/A"; } ?>
+	</td>
+	<td><?=$merchant_item['company']['legalName']?></td>
+	<td>
+		<?php 
+		if( isset($merchant_item['status']) ){
+			echo $merchant_item['status'];
+		} else { echo "N/A"; } ?>
+	</td>
+
+	<td><?=$merchant_item['company']['companyPhone']?></td>
+	
+	<td>
+		<?php 
+		if( isset($merchant_item['mid']) ){ ?>
+			<a href="<?php echo site_url('mid/'.$merchant_item['mid']); ?>">View mid</a>
+		<?php } else { echo "N/A"; } ?>
+	</td>
+	<td></td>
+</tr>
+<?php }; ?> 
 </table>
-</div>
+	</div></div>
+
+
+
+
+

@@ -17,6 +17,7 @@ class Merchant extends CI_Controller {
 
 
 
+
                 $this->load->view('templates/header', $data);
                 $this->load->view('merchant/index', $data);
                 $this->load->view('templates/footer');
